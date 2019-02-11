@@ -2,23 +2,24 @@
 window.onload = function () {
 	
     document.addEventListener('tizenhwkey', function(e) {
-        if(e.keyName == "back")
-	try {
-	    tizen.application.getCurrentApplication().exit();
-	} catch (ignore) {
-	}
+        if(e.keyName === "back"){
+			try {
+			    tizen.application.getCurrentApplication().exit();
+			} catch (ignore) {
+			}
+        }
     });
 
 	var minutes = 0;
 	var seconds = 0;
 	var interval;
-	var paused;
+	var paused = false;
 	
-	document.getElementById("pomo").addEventListener("click", function(){startTimer(25,0)});
-	document.getElementById("shortPause").addEventListener("click", function(){startTimer(5,0)});
-	document.getElementById("longPause").addEventListener("click", function(){startTimer(10,0)});
-	document.getElementById("logo-img").addEventListener("click", function(){stateManager()});
-	
+	document.getElementById("pomo").addEventListener("click", function(){startTimer(25,0);});
+	document.getElementById("shortPause").addEventListener("click", function(){startTimer(5,0);});
+	document.getElementById("longPause").addEventListener("click", function(){startTimer(10,0);});
+	document.getElementById("logo-img").addEventListener("click", function(){stateManager();});
+
 	function startTimer(receivedMinutes, receivedSeconds){
 		minutes = receivedMinutes;
 		seconds = receivedSeconds;

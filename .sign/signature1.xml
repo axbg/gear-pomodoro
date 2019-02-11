@@ -12,15 +12,15 @@
 </Reference>
 <Reference URI="author-signature.xml">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>5kpHsMuOCNcw9J+Qq464djIk9qEpcvCidJv/c2svBqc=</DigestValue>
+<DigestValue>vrt/hjyAlB4+toexs7mJBzACn58JPxIxkgrusV4+A7g=</DigestValue>
 </Reference>
 <Reference URI="config.xml">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>d/rOdRbyRf4UaM5hIcG8/1dJ8X7+0grMEi7BRRVp6Bo=</DigestValue>
+<DigestValue>cgxmCBmrVkKzsRCH0+NJCYevAnapJJ/a36fPnOlAHlg=</DigestValue>
 </Reference>
 <Reference URI="css%2Fstyle.css">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>MgzFmX4bFTrpt+ZWgHJ7mbrDReAPOtk0rzD72QMWx6Q=</DigestValue>
+<DigestValue>1FrDVGWu2xGO+xjZZxBL/Tf/3aPhSimoinfgx06C11E=</DigestValue>
 </Reference>
 <Reference URI="icon.png">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
@@ -28,15 +28,15 @@
 </Reference>
 <Reference URI="index.html">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>jqlAkJSWf/RVOjldkbN3tsq2Ti7czGop2p/MvZIVH28=</DigestValue>
+<DigestValue>dQlz40A670ENrlY2mCHsXxm5JL3j/MzVlcGCP18OS1c=</DigestValue>
 </Reference>
 <Reference URI="js%2Fmain.js">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>ilBbsNkTEGYRq+uTTBnEuat4g8oO573P3KEU4DJ3k8I=</DigestValue>
+<DigestValue>z7ceIyuqu1x6pilJeTznaLEW4lhggxw6uV/I357blHk=</DigestValue>
 </Reference>
 <Reference URI="pattern.jpg">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>5tA68hOOR7JXYllmRdb8vmJ95Pc8BqaQ0TBxLorwnFw=</DigestValue>
+<DigestValue>EnJETb1Vq0CYtvNsqrPg6/YiSi/b0WnGYALT/gJbTco=</DigestValue>
 </Reference>
 <Reference URI="pause.png">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
@@ -48,7 +48,7 @@
 </Reference>
 <Reference URI="tomato.png">
 <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"></DigestMethod>
-<DigestValue>DAqkUonM40Tjwww2Mt7KiNcftZv/IAP1GXke07LZegg=</DigestValue>
+<DigestValue>8dZ5hth+JlGhETMPWHV+cAHs9eEqnMzndzeXY5OA4/Y=</DigestValue>
 </Reference>
 <Reference URI="#prop">
 <Transforms>
@@ -59,11 +59,11 @@
 </Reference>
 </SignedInfo>
 <SignatureValue>
-d2N8l4Zr1I+bU6LWb+IGRfGEaJDNpdmLDXS/Wia6Swj1LFblrO4M2IbVM+TvhYZhcmXc5d2kS422
-MyRGciynQEHLdGycG01YLzmkbVVG9VeEL7n/kidU1ne4fxZ0wcoo3mQFcYCyYuOZaxXl+HhnNcOr
-hUxt2TNGoAOpjSKXJjSpeljrT6a7CEbrtZPMY3wU7fJJPEHMJKs5zIyMlmzB1DGJTmTaXsH1fOIO
-I3ZiU64C5lvVDzLTmEnmkWY7WOQtgf700hzkjjxOKvznPLdBz4yGwcEtgWVglVA0o4BcKNCMqqTP
-tEzOt2OyMUq6DpDdr7LdBGZdeTfopGl7J67fGw==
+vErO9GMCyDt9DfmnbHf4puAvLi6igRfQRS7gaMGILDiG1E6qmMc+z9Jkm/DqtPzmcbI2XT57tGi9
+VmGQSvTkFpZHJEDQAb4VGT7z/w0SiUuCtxMbk+RUkePyQGh8uUpbqtP+1m1/TpUZX9+fnkErC7yd
+ZEGb8hRvSBc6vPINkbu3NyHLt/9HrpI7IJfFSScBd26Hq5vT5ijLMb9ojvc+V6aSvggSJHIYCVi/
+mnC/vrTa/y96B1o8buxj+Yi3hPADkuqhNN5ClJR106Z+q9y3d+hcMV2OV/ahRgpbVpL6r7su6msa
+8XggwgrJlV8/FyA+QARDZTEyMu8UU7qig9dY4A==
 </SignatureValue>
 <KeyInfo>
 <X509Data>

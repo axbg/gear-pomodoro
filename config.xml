@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<widget xmlns:tizen="http://tizen.org/ns/widgets" xmlns="http://www.w3.org/ns/widgets" id="https://github.com/axbg/gear-pomodoro" version="1.0.1" viewmodes="maximized">
-    <tizen:application id="Zg8NlKtlKH.BasicUI" package="Zg8NlKtlKH" required_version="3.0"/>
+<widget xmlns="http://www.w3.org/ns/widgets" xmlns:tizen="http://tizen.org/ns/widgets" id="http://yourdomain/PomodoroApp" version="1.0.1" viewmodes="maximized">
+    <tizen:application id="ktwHBkcdPs.PomodoroApp" package="ktwHBkcdPs" required_version="3.0"/>
     <author email="bisagalexstefan@gmail.com">Alex Bisag</author>
     <content src="index.html"/>
-    <description>A simple Pomodoro Timer app.</description>
     <feature name="http://tizen.org/feature/screen.size.all"/>
     <icon src="tomato.png"/>
-    <name>PomodoroTimer</name>
+    <name>Pomodoro Timer</name>
     <tizen:profile name="wearable"/>
+    <tizen:setting background-support="enable" encryption="disable" hwkey-event="enable"/>
 </widget>
