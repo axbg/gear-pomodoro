@@ -15,6 +15,7 @@ window.onload = function () {
 	var interval;
 	var paused = false;
 	
+	const time = document.querySelectorAll(".timer");
 	document.getElementById("pomo").addEventListener("click", function(){startTimer(25,0);});
 	document.getElementById("shortPause").addEventListener("click", function(){startTimer(5,0);});
 	document.getElementById("longPause").addEventListener("click", function(){startTimer(10,0);});
@@ -23,6 +24,10 @@ window.onload = function () {
 	function startTimer(receivedMinutes, receivedSeconds){
 		minutes = receivedMinutes;
 		seconds = receivedSeconds;
+		
+		for(var i = 0; i<time.length; i++){
+			time[i].classList.remove("red");
+		}
 		
 		unpause();
 		
@@ -47,20 +52,25 @@ window.onload = function () {
 	}
 	
 	function updateTime(){
-		seconds = seconds - 1;
-		
-		if(seconds === -1){
-			minutes = minutes - 1;
-			seconds = 59;
-		}
-		
-		if(minutes === 0 && seconds === -1){
+		if(minutes <= 0 && seconds <= 0){
 			finishTimer();
+		} else {
+			seconds = seconds - 1;
+			
+			if(seconds === -1){
+				minutes = minutes - 1;
+				seconds = 59;
+			}
 		}
 	}
 	
 	function finishTimer(){
 		clearInterval(interval);
+		
+		for(var i = 0; i<time.length; i++){
+			time[i].classList.add("red");
+		}
+		
 		navigator.vibrate(3000);
 	}
 	
@@ -76,7 +86,6 @@ window.onload = function () {
 		paused = true;
 		document.getElementById("logo-img").src = "play.png";
 		
-		var time = document.querySelectorAll(".timer");
 		for(var i = 0; i<time.length; i++){
 			time[i].classList.add("red");
 		}
@@ -88,19 +97,17 @@ window.onload = function () {
 		paused = false;
 		document.getElementById("logo-img").src = "pause.png";
 		
-		var time = document.querySelectorAll(".timer");
 		for(var i = 0; i<time.length; i++){
 			time[i].classList.remove("red");
 		}
 		
 		startTimer(minutes,seconds);
 	}
-	
+
 	function unpause(){
 		paused = false;
 		document.getElementById("logo-img").src = "pause.png";
 		
-		var time = document.querySelectorAll(".timer");
 		for(var i = 0; i<time.length; i++){
 			time[i].classList.remove("red");
 		}
