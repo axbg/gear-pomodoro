@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<widget xmlns="http://www.w3.org/ns/widgets" xmlns:tizen="http://tizen.org/ns/widgets" id="http://yourdomain/pomodoroTimer" version="1.0.0" viewmodes="maximized">
-    <tizen:application id="rVkjtlI01Z.pomodoroTimer" package="rVkjtlI01Z" required_version="2.3.1" ambient_support="disable" launch_mode="single"/>
-    <tizen:category name="http://tizen.org/category/wearable_clock"/>
+<widget xmlns:tizen="http://tizen.org/ns/widgets" xmlns="http://www.w3.org/ns/widgets" id="https://github.com/axbg/gear-pomodoro" version="1.0.1" viewmodes="maximized">
+    <tizen:application id="Zg8NlKtlKH.BasicUI" package="Zg8NlKtlKH" required_version="3.0"/>
+    <author email="bisagalexstefan@gmail.com">Alex Bisag</author>
     <content src="index.html"/>
-    <feature name="http://tizen.org/feature/screen.shape.circle"/>
+    <description>A simple Pomodoro Timer app.</description>
     <feature name="http://tizen.org/feature/screen.size.all"/>
     <icon src="tomato.png"/>
-    <name>pomodoroTimer</name>
+    <name>PomodoroTimer</name>
     <tizen:profile name="wearable"/>
-    <tizen:setting background-support="disable" encryption="disable" hwkey-event="enable"/>
 </widget>
