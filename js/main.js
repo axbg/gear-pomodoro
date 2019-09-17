@@ -9,12 +9,16 @@ window.onload = function () {
 			}
         }
     });
-
+    
+    document.addEventListener("visibilitychange", resumeApp);
+    
 	var minutes = 0;
 	var seconds = 0;
 	var interval;
 	var paused = false;
 	
+	checkAppControl();
+		
 	const time = document.querySelectorAll(".timer");
 	document.getElementById("pomo").addEventListener("click", function(){startTimer(25,0);});
 	document.getElementById("shortPause").addEventListener("click", function(){startTimer(5,0);});
@@ -24,6 +28,9 @@ window.onload = function () {
 	function startTimer(receivedMinutes, receivedSeconds){
 		minutes = receivedMinutes;
 		seconds = receivedSeconds;
+		
+		removeAlarms();
+		setAlarm(minutes, seconds);
 		
 		for(var i = 0; i<time.length; i++){
 			time[i].classList.remove("red");
@@ -84,6 +91,7 @@ window.onload = function () {
 	
 	function pauseTimer(){
 		paused = true;
+		
 		document.getElementById("logo-img").src = "play.png";
 		
 		for(var i = 0; i<time.length; i++){
@@ -91,6 +99,7 @@ window.onload = function () {
 		}
 		
 		clearInterval(interval);
+		removeAlarms();
 	}
 	
 	function resumeTimer(){
@@ -112,5 +121,39 @@ window.onload = function () {
 			time[i].classList.remove("red");
 		}
 	}
-    
+	
+	function resumeApp() {
+		if(!document.hidden && !paused && minutes !== 0 && seconds !== 0) {
+			var remainingTime = getRemainingTime();
+			if(remainingTime !== -1) {
+				startTimer(Math.floor(remainingTime / 60), remainingTime % 60);
+			}
+		}
+	}
+	
+	function getRemainingTime() {
+		var alarms = tizen.alarm.getAll();
+		return alarms[0] ? alarms[0].getRemainingSeconds() : -1;
+	}
+	
+	function setAlarm(minutes, seconds) {
+		var appId = tizen.application.getCurrentApplication().appInfo.id;
+		var appControl = new tizen.ApplicationControl("http://example.tizen.org/operation/finish");
+		var alarm = new tizen.AlarmRelative(minutes * tizen.alarm.PERIOD_MINUTE + seconds);
+		
+		tizen.alarm.add(alarm, appId, appControl);
+		console.log("added alarm: " + JSON.stringify(alarm));
+	}
+	
+	function removeAlarms() {
+		tizen.alarm.removeAll();
+		console.log("all alarms removed");
+	}
+	
+	function checkAppControl() {
+		var appCtrl = tizen.application.getCurrentApplication().getRequestedAppControl();
+		if(appCtrl.appControl.operation.includes("finish")){
+			  finishTimer();
+		}
+	}
 };
