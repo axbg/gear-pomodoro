@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<widget xmlns="http://www.w3.org/ns/widgets" xmlns:tizen="http://tizen.org/ns/widgets" id="http://yourdomain/PomodoroApp" version="1.0.1" viewmodes="maximized">
+<widget xmlns="http://www.w3.org/ns/widgets" xmlns:tizen="http://tizen.org/ns/widgets" id="http://axbg/gomodoro" version="1.0.2" viewmodes="maximized">
+    <tizen:app-control>
+        <tizen:src name="index.html"/>
+        <tizen:operation name="http://example.tizen.org/operation/finish"/>
+    </tizen:app-control>
     <tizen:app-widget id="ktwHBkcdPs.PomodoroApp.Widget1" primary="true">
         <tizen:widget-label>Hello Web Widget!</tizen:widget-label>
         <tizen:widget-content src="widget/index.html">
@@ -11,12 +15,8 @@
     <content src="index.html"/>
     <feature name="http://tizen.org/feature/screen.size.all"/>
     <icon src="tomato.png"/>
-    <name>Pomodoro Timer</name>
+    <name>Gomodoro</name>
     <tizen:privilege name="http://tizen.org/privilege/alarm"/>
     <tizen:profile name="wearable"/>
     <tizen:setting background-support="enable" encryption="disable" hwkey-event="enable"/>
-    <tizen:app-control>
-   		<tizen:src name="index.html"/>
-   		<tizen:operation name="http://example.tizen.org/operation/finish"/>
-	</tizen:app-control>
 </widget>
