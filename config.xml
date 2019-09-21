@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<widget xmlns="http://www.w3.org/ns/widgets" xmlns:tizen="http://tizen.org/ns/widgets" id="http://axbg/gomodoro" version="1.0.2" viewmodes="maximized">
+<widget xmlns:tizen="http://tizen.org/ns/widgets" xmlns="http://www.w3.org/ns/widgets" id="http://axbg/gomodoro" version="1.0.2" viewmodes="maximized">
     <tizen:app-control>
         <tizen:src name="index.html"/>
         <tizen:operation name="http://example.tizen.org/operation/finish"/>
     </tizen:app-control>
-    <tizen:app-widget id="ktwHBkcdPs.PomodoroApp.Widget1" primary="true">
+    <tizen:app-widget id="XFngD5srqc.Gomodoro.Widget1" primary="true">
         <tizen:widget-label>Hello Web Widget!</tizen:widget-label>
         <tizen:widget-content src="widget/index.html">
             <tizen:widget-size preview="tomato.png">2x2</tizen:widget-size>
         </tizen:widget-content>
     </tizen:app-widget>
-    <tizen:application id="ktwHBkcdPs.PomodoroApp" package="ktwHBkcdPs" required_version="3.0"/>
+    <tizen:application id="XFngD5srqc.Gomodoro" package="XFngD5srqc" required_version="3.0"/>
     <author email="bisagalexstefan@gmail.com">Alex Bisag</author>
     <content src="index.html"/>
     <feature name="http://tizen.org/feature/screen.size.all"/>
