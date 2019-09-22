@@ -36,6 +36,7 @@ window.onload = function() {
         minutes = receivedMinutes;
         seconds = receivedSeconds;
 
+        showTimer();
         removeAlarms();
         setAlarm(minutes, seconds);
 
